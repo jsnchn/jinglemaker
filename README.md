@@ -1,3 +1,3 @@
 Jingle Maker
 ===========
-Based upon [beeplay](http://watilde.github.io/beeplay/)
+Based upon [beeplay.js](http://watilde.github.io/beeplay/)

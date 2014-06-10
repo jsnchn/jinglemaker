@@ -2,6 +2,7 @@
 
 angular
   .module('jinglemakerApp', [
+    'ui.bootstrap',
     'ngCookies',
     'ngResource',
     'ngSanitize',

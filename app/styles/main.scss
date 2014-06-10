@@ -75,6 +75,19 @@ body {
 #bpm-input{
     width: 120px;
 }
+#track{
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    height: 200px;
+}
+#track .noteCol{
+    height: 100%;
+    width: 1.17647%;
+    display: inline-block;
+}
+#track .noteCol:nth-child(even){
+    background-color: #f3f3f3;
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

@@ -11,7 +11,7 @@
     "angular-cookies": "1.2.15",
     "angular-sanitize": "1.2.15",
     "angular-route": "1.2.15",
-    "beeplay": "~0.0.2"
+    "beeplay": null
   },
   "devDependencies": {
     "angular-mocks": "1.2.15",

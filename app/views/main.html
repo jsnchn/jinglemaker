@@ -2,16 +2,16 @@
   <div class="btn-toolbar pull-right" role="toolbar">
     <div id="bpm-input" class="input-group">
       <span class="input-group-addon">bpm</span>
-      <input ng-model="bpm" type="text" class="form-control" placeholder="1-300">
+      <input ng-model="bpm" type="number" min="1" max"300" class="form-control" placeholder="1-300">
     </div>
-    <!-- <div class="btn-group">
+    <div class="btn-group">
       <label class="btn btn-default" ng-model="increment" btn-radio="'1/1'" uncheckable>1/1</label>
       <label class="btn btn-default" ng-model="increment" btn-radio="'1/2'" uncheckable>1/2</label>
       <label class="btn btn-default" ng-model="increment" btn-radio="'1/4'" uncheckable>1/4</label>
       <label class="btn btn-default" ng-model="increment" btn-radio="'1/8'" uncheckable>1/8</label>
       <label class="btn btn-default" ng-model="increment" btn-radio="'1/16'" uncheckable>1/16</label>
       <label class="btn btn-default" ng-model="increment" btn-radio="'1/32'" uncheckable>1/32</label>
-    </div> -->
+    </div>
     <div class="btn-group">
       <button type="button" class="btn btn-{{playOnOff ? 'warning' : 'info'}}" ng-init="playOnOff = false" ng-click="playOnOff = !playOnOff"><span class="glyphicon glyphicon-{{playOnOff ? 'pause' : 'play'}}"></span></button>
     </div>
@@ -19,12 +19,16 @@
   <h3 class="text-muted">hello</h3>
 </div>
 
-<div class="jumbotron">
+<!-- <div class="jumbotron">
 
-</div>
-
+</div> -->
 <div id="track" class="row marketing">
-  
+  <div class="octaveCol" ng-repeat="octave in octaves" data-octave="{{ octave }}">
+    <div class="noteCol" ng-repeat="key in keys" data-key="{{ key }}{{ octave }}"><p>{{ key }}</p></div>
+  </div>
+  <div class="octaveCol" data-octave="10">
+    <div class="noteCol" data-key="c10"><p>c</p></div>
+  </div>
 </div>
 
 <div class="footer">

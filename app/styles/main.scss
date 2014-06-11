@@ -73,26 +73,65 @@ body {
 
 /*styles start here*/
 #bpm-input{
-    width: 120px;
+    width: 130px;
 }
 #track{
-    border-left: 1px solid #eee;
-    border-right: 1px solid #eee;
-    height: 200px;
+    height: 600px;
+    user-select: none;
+}
+#track .octaveCol{
+    margin: 0;
+    padding: 0;
+    width: 12.3711%;
+    /*display: inline-block;*/
+    float: left;
+    height: 100%;
+    position: relative;
+}
+#track .octaveCol:before{
+    content:attr(data-octave);
+    position: absolute;
+    top: -20px;
+    font-size: 10px;
+    text-align: center;
+    width: 100%;
+    border-bottom: 3px solid #ccc;
+}
+#track .octaveCol:nth-child(odd):before{
+    border-bottom: 3px solid #777;
 }
 #track .noteCol{
     height: 100%;
-    width: 1.17647%;
-    display: inline-block;
+    width: 8.334%;
+    /*display: inline-block;*/
+    float: left;
+    position: relative;
 }
-#track .noteCol:nth-child(even){
+#track .noteCol:nth-child(odd){
     background-color: #f3f3f3;
+}
+/*last*/
+#track .octaveCol:last-child{
+    width: 1.0309%;
+}
+#track .octaveCol:last-child .noteCol{
+    width: 100%;
+}
+#track .noteCol p{
+    font-size: 9px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 10px;
+}
+#track .noteCol:nth-child(odd) p{
+    top: 20px;
 }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
-        max-width: 730px;
+        max-width: 1190px;
     }
 
     /* Remove the padding we set earlier */
